@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array Methods Demo</title>
+  </head>
+  <body>
+    <h1>Array Methods Demo</h1>
+    <p>Numbers: [1, 2, 3, 4, 5]</p>
+
+    <button onclick="showMap()">Show map()</button>
+    <button onclick="showFilter()">Show filter()</button>
+    <button onclick="showReduce()">Show reduce()</button>
+    <button onclick="showForEach()">Show forEach()</button>
+
+    <div id="output">Click a button to see the result!</div>
+
+    <div>
+      github repo:
+      <a href="https://github.com/machiloop14/flexisaf-Task1">click here</a>
+    </div>
+
+    <script>
+      const numbers = [1, 2, 3, 4, 5];
+      const output = document.getElementById("output");
+
+      const showMap = () => {
+        const doubled = numbers.map((num) => num * 2);
+        output.innerHTML = `
+        <p><b>map()</b>: ${doubled}</p>
+        <p><i>map() creates a new array by applying a function to each element. 
+        Here, each number was doubled.</i></p>
+      `;
+      };
+
+      const showFilter = () => {
+        const evens = numbers.filter((num) => num % 2 === 0);
+        output.innerHTML = `
+        <p><b>filter()</b>: ${evens}</p>
+        <p><i>filter() creates a new array with only the elements that pass a condition. 
+        Here, only even numbers were kept.</i></p>
+      `;
+      };
+
+      const showReduce = () => {
+        const sum = numbers.reduce((acc, num) => acc + num, 0);
+        output.innerHTML = `
+        <p><b>reduce()</b>: ${sum}</p>
+        <p><i>reduce() processes the array to a single value. 
+        Here, all numbers were added together to get the sum.</i></p>
+      `;
+      };
+
+      const showForEach = () => {
+        let list = "";
+        numbers.forEach((num) => (list += num + " "));
+        output.innerHTML = `
+        <p><b>forEach()</b>: ${list}</p>
+        <p><i>forEach() executes a function for each array element. 
+        Here, we simply displayed each number in order.</i></p>
+      `;
+      };
+    </script>
+  </body>
+</html>
