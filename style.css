@@ -14,7 +14,7 @@ body {
 }
 
 .heading {
-  margin-top: 40px;
+  margin-top: 2.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
