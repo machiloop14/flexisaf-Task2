@@ -2,64 +2,88 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <title>Array Methods Demo</title>
   </head>
   <body>
-    <h1>Array Methods Demo</h1>
-    <p>Numbers: [1, 2, 3, 4, 5]</p>
+    <div class="body-wrapper">
+      <div class="heading">
+        <h1>ES6 Array Methods Playground</h1>
+        <p>
+          Explore map(), filter(), reduce(), and forEach() with a clear,
+          beginner-friendly layout. Click a button to see what each method
+          returns using the intial array below.
+        </p>
+      </div>
 
-    <button onclick="showMap()">Show map()</button>
-    <button onclick="showFilter()">Show filter()</button>
-    <button onclick="showReduce()">Show reduce()</button>
-    <button onclick="showForEach()">Show forEach()</button>
+      <div class="main-section">
+        <div class="row-1">
+          <div class="">
+            <img src="/images/menu.png" alt="" class="img-hamburger" />
+            <p>Initial array</p>
+          </div>
+          <p>Numbers used in examples</p>
+        </div>
+        <div class="row-2">
+          <p>[1, 2, 3, 4, 5]</p>
+        </div>
+        <div class="row-3"></div>
+      </div>
+      <!-- <p>Numbers: [1, 2, 3, 4, 5]</p> -->
 
-    <div id="output">Click a button to see the result!</div>
+      <button onclick="showMap()">Show map()</button>
+      <button onclick="showFilter()">Show filter()</button>
+      <button onclick="showReduce()">Show reduce()</button>
+      <button onclick="showForEach()">Show forEach()</button>
 
-    <div>
-      github repo:
-      <a href="https://github.com/machiloop14/flexisaf-Task1">click here</a>
-    </div>
+      <div id="output">Click a button to see the result!</div>
 
-    <script>
-      const numbers = [1, 2, 3, 4, 5];
-      const output = document.getElementById("output");
+      <div>
+        github repo:
+        <a href="https://github.com/machiloop14/flexisaf-Task1">click here</a>
+      </div>
 
-      const showMap = () => {
-        const doubled = numbers.map((num) => num * 2);
-        output.innerHTML = `
+      <script>
+        const numbers = [1, 2, 3, 4, 5];
+        const output = document.getElementById("output");
+
+        const showMap = () => {
+          const doubled = numbers.map((num) => num * 2);
+          output.innerHTML = `
         <p><b>map()</b>: ${doubled}</p>
         <p><i>map() creates a new array by applying a function to each element. 
         Here, each number was doubled.</i></p>
       `;
-      };
+        };
 
-      const showFilter = () => {
-        const evens = numbers.filter((num) => num % 2 === 0);
-        output.innerHTML = `
+        const showFilter = () => {
+          const evens = numbers.filter((num) => num % 2 === 0);
+          output.innerHTML = `
         <p><b>filter()</b>: ${evens}</p>
         <p><i>filter() creates a new array with only the elements that pass a condition. 
         Here, only even numbers were kept.</i></p>
       `;
-      };
+        };
 
-      const showReduce = () => {
-        const sum = numbers.reduce((acc, num) => acc + num, 0);
-        output.innerHTML = `
+        const showReduce = () => {
+          const sum = numbers.reduce((acc, num) => acc + num, 0);
+          output.innerHTML = `
         <p><b>reduce()</b>: ${sum}</p>
         <p><i>reduce() processes the array to a single value. 
         Here, all numbers were added together to get the sum.</i></p>
       `;
-      };
+        };
 
-      const showForEach = () => {
-        let list = "";
-        numbers.forEach((num) => (list += num + " "));
-        output.innerHTML = `
+        const showForEach = () => {
+          let list = "";
+          numbers.forEach((num) => (list += num + " "));
+          output.innerHTML = `
         <p><b>forEach()</b>: ${list}</p>
         <p><i>forEach() executes a function for each array element. 
         Here, we simply displayed each number in order.</i></p>
       `;
-      };
-    </script>
+        };
+      </script>
+    </div>
   </body>
 </html>
