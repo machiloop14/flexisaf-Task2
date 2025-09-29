@@ -1,15 +1,21 @@
-# Array Methods Demo (ES6 + CSS Enhancements)
+# Array Methods Demo (ES6 + SCSS Enhancements)
 
-This project is part of my frontend internship curriculum.
+This project is part of my frontend internship curriculum.  
+It demonstrates the use of **ES6 features** and progressively applies **modern styling using SCSS (which compiles to CSS)**.
 
 - **Week 1 Deliverable:** Demonstrate ES6 features (arrays, arrow functions, let/const, scope) with a simple interactive webpage.
 - **Week 2 Deliverable:** Enhance the same webpage with **CSS properties, selectors, text/fonts, images in CSS, box model, layout, flexbox, and responsiveness**.
+- **Week 3 Deliverable:** Style and structure the same webpage using SCSS.
 
 ---
 
-## Week 1 Recap
+## 📝 Week 1 Recap
 
-The Week 1 version of this project showed how ES6 array methods (`map`, `filter`, `reduce`, `forEach`) work on the array `[1, 2, 3, 4, 5]`. Each method could be executed by clicking a button, and the result was displayed along with a short description.
+The Week 1 implementation focused on core JavaScript (ES6) concepts:
+
+- Demonstrating array methods (`map`, `filter`, `reduce`, `forEach`) on the array `[1, 2, 3, 4, 5]`.
+- Implementing logic with **arrow functions** and `let`/`const`.
+- Each method is triggered by a button, and the result is displayed with a short explanation.
 
 ---
 
@@ -17,73 +23,88 @@ The Week 1 version of this project showed how ES6 array methods (`map`, `filter`
 
 In Week 2, I extended the project with **CSS styling and layout concepts**:
 
-### ✅ CSS Properties
+---
 
-- Used `color`, `background-color`, `margin`, `padding`, `border`, and `font-size`.
+## 🎨 Week 3 Enhancements (Using SCSS)
 
-### ✅ CSS Selectors
+For Week 3, SCSS was introduced to organize and scale styling more cleanly.  
+The compiled CSS is applied to the same HTML structure.
 
-- Applied **element selectors** (`p`, `button`),
-- **class selectors** (`.button-group`),
-- **id selectors** (`#output`).
+### ✅ SCSS Features Used
 
-### ✅ Text and Font
+- **Nesting** – for cleaner selector structure.
+- **Variables** – for reusable colors and spacing.
+- **Partials & Organization** – separating styling logic for readability.
+- **SCSS Compilation** – converted to standard CSS for browser use.
 
-- Changed font family (`Arial, sans-serif`),
-- Adjusted font sizes with `rem` and `em`,
-- Controlled line height for readability.
+### ✅ Styling Concepts Implemented
 
-### ✅ Images in CSS
-
-- Added a decorative image using `background-image` in the output box.
-
-### ✅ Box Model
-
-- Applied `margin`, `padding`, `border`, and `content` styles to the output container.
-
-### ✅ px vs em vs rem
-
-- Demonstrated font sizing differences (`px`, `em`, `rem`) in text elements.
-
-### ✅ Layout
-
-- Structured page sections (`h1`, paragraph, button group, output box).
-
-### ✅ Flexbox
-
-- Used `display: flex` and `gap` for arranging buttons.
-- Allowed wrapping for responsiveness.
-
-### ✅ Responsiveness
-
-- Added a media query (`max-width: 600px`) to adjust text size and stack buttons vertically on smaller screens.
+| Concept             | Description                                                                                |
+| ------------------- | ------------------------------------------------------------------------------------------ |
+| **CSS Properties**  | Used `color`, `background-color`, `margin`, `padding`, `border`, and `font-size`.          |
+| **CSS Selectors**   | Applied element (`p`, `button`), class (`.button-group`), and ID (`#output`) selectors.    |
+| **Text & Fonts**    | Customized `font-family`, `font-size` (using `rem`/`em`), and line-height for readability. |
+| **Images in CSS**   | Added a decorative image using `background-image` in the output box.                       |
+| **Box Model**       | Demonstrated margin, padding, border, and content spacing clearly.                         |
+| **px vs em vs rem** | Showed differences in font sizing approaches.                                              |
+| **Layout**          | Structured page sections (`header`, `buttons`, `output`).                                  |
+| **Flexbox**         | Used `display: flex` for button arrangement with wrapping.                                 |
+| **Responsiveness**  | Added media queries to make the layout mobile-friendly.                                    |
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
-│── index.html # main html file
-│── style.css # main css file
+```
+array-methods-demo/
+│── index.html         # Main HTML file
+│── scss/
+│   ├── _base.scss   # global styles
+│   ├── _variables.scss   # SCSS variables (colors, fonts, spacing)
+│   ├── _layout.scss      # Flexbox and layout styles
+│   ├── _components.scss  # Reusable components
+│   └── main.scss        # Main SCSS file importing partials
+│── css/
+│   └── main.css         # Compiled CSS from SCSS
+│── README.md
+```
 
 ---
 
-## How to Run
+## 🚀 How to Run
 
-1. Clone or download this project.
-2. Open `index.html` in any modern browser (Chrome, Firefox, Edge, etc.).
-3. Click any button to run an array method and see styled results.
+1. Clone or download this repository.
+2. Ensure you have **Sass/SCSS installed** globally or in your project:
+   ```bash
+   npm install -g sass
+   ```
+3. Compile SCSS to CSS (if not already compiled):
+   ```bash
+   sass scss/main.scss css/main.css
+   ```
+4. Open `index.html` in any modern browser (Chrome, Firefox, Edge).
+5. Click any of the array method buttons to see the result and the styled interface.
 
 ---
 
-## Example (map)
+## 🧪 Example (map)
 
-When clicking **map()**, the output shows:
+When clicking **map()**, the output displays:
+
+```
 map(): 2,4,6,8,10
 map() creates a new array by applying a function to each element.
 Here, each number was doubled.
+```
 
-## Future Improvements
+Now, the result box is styled with borders, padding, background color, and responsive behavior using SCSS.
 
-- Add **object examples** with methods to cover Week 1 topics more fully.
-- Let users **enter their own array** instead of using `[1, 2, 3, 4, 5]`.
-- Explore **CSS Grid** as an alternative layout method in future weeks.
+---
+
+## 🧰 Tools & Technologies
+
+- **HTML5**
+- **JavaScript (ES6)**
+- **SCSS (Sass)** — compiled to CSS
+- **Flexbox** for layout
+- **Media Queries** for responsiveness

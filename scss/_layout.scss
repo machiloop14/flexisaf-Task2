@@ -1,14 +1,8 @@
-// ================================
-// 🧭 LAYOUT
-// ================================
 .body-wrapper {
   width: 85%;
   margin-inline: auto;
 }
 
-// ================================
-// 📝 HEADINGS
-// ================================
 .heading {
   margin-top: 2.5rem;
   display: flex;
@@ -22,9 +16,6 @@
   }
 }
 
-// ================================
-// 📌 MAIN SECTION
-// ================================
 .main-section {
   background-color: $bg-section;
   padding-inline: 16px;
