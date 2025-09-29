@@ -1,0 +1,74 @@
+// ================================
+// 🖼 ICONS & IMAGES
+// ================================
+.img-hamburger {
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+}
+
+// ================================
+// 🧮 FUNCTION BUTTON WRAPPER
+// ================================
+.function-wrapper {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  background-color: $primary-blue;
+  padding-inline: 12px;
+  padding-block: 8px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  font-weight: normal;
+  color: #fff;
+
+  img {
+    margin-right: 4px;
+  }
+}
+
+// ================================
+// 📊 RESULT SECTION
+// ================================
+.result-wrapper {
+  padding-block: 18px;
+  padding-inline: 20px;
+  border-radius: 14px;
+  margin-top: 40px;
+  background-color: $bg-white;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.info-wrapper {
+  width: 32px;
+  height: 32px;
+  background-color: #f3f4f6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.result-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  p {
+    font-weight: bold;
+  }
+}
